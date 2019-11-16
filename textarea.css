@@ -60,13 +60,13 @@
     #front{
       background-repeat: no-repeat;
       width: 25px; height:150px;
-      background-image:url(왼1.png);}
+      background-image:url(472OC/왼1.png);}
 
     #content{
       font-family: 'Abel', sans-serif;
       padding-left: 30px;
       padding-right: 30px;
-      background-image: url(중간2.png);
+      background-image: url(472OC/중간2.png);
       text-align:center;
       font-size: 2rem;
       vertical-align: middle;
@@ -75,7 +75,7 @@
     #back{
       background-repeat: no-repeat;
       width: 25px; height:150px;
-      background-image: url(오1.png);}
+      background-image: url(472OC/오1.png);}
       
 
     #log_type{
