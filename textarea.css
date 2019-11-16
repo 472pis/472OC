@@ -91,6 +91,10 @@
       filter: drop-shadow(0px 0px 1px gray);
     }
 
+a:hover {
+    text-decoration-line: none;
+}
+
 #log_type h3{
   font-size: 1rem;
   position: relative; top:-70px;
