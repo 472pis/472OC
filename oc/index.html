@@ -146,7 +146,7 @@ function closeNav() {
       
       var char = items[i];
       var split = setting[char].split(',');
-      var tag = '<div class="one_fourth"><div style="background:'+split[4]+';" class="button_container"><div class="head" style="background-image: url(../'+char+'/'+char+'.png);"></div><a'+split[5]+' href="index.html#!'+char+'" onclick="fetchInfo(&#39;'+char+'&#39;);">'+char.toUpperCase()+'</a></div></div>';
+      var tag = '<div class="one_fourth"><div style="background:'+split[4]+';" class="button_container"><div class="head" style="background-image: url(../'+char+'/'+char+'.png);"></div><a'+split[5]+' href="#!'+char+'" onclick="fetchInfo(&#39;'+char+'&#39;);">'+char.toUpperCase()+'</a></div></div>';
         tags = tags + tag;
         
       i = i + 1;  
