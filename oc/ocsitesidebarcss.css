@@ -1,0 +1,163 @@
+
+
+/*sidebar*/
+
+
+    .button_images{
+      
+      max-width: 950px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      
+    }
+.button_box{
+      margin-top: 40px;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    .button_container{
+      color:white;
+      background: rgba(88, 88, 88, 50%);
+      border-radius: 15%;
+      margin: 5px;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      transition-timing-function: -webkit-transition: all 400ms cubic-bezier(0.680, 0, 0.265, 1); 
+-webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+   -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+     -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+
+-webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); 
+-webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+   -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+     -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+        
+      
+      
+   } 
+  .button_container .head {
+      width: 100%;
+      height: 100%;
+      background-size: 150px; background-position: left;
+      transition: 0.4s ease;
+      }
+    
+    .button_container img{
+      width: 150px; height: 150px;
+      transition: all 0.5s;
+      position: relative;
+      bottom:20px;
+
+    }
+    
+    .button_container a:before{
+      content: '';
+      display: inline-block;
+      height: 10%;
+
+    }
+    .button_container a {
+      font-family: 'Alfa Slab One', cursive;
+      letter-spacing: -1px;
+      transform: rotate(-5deg);
+      transition: all 0.5s;
+      color:white;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-decoration-line: none;
+      text-shadow: 0px 1px 0px black;
+      position:absolute;
+      top:-100px;
+      left:-50%;
+      right:0;
+      bottom:0;
+      width:200%;
+      height: 100%;
+      }
+
+    
+    .button_container:hover img{
+      filter: contrast(80%) grayscale(50%) ;
+      
+    }
+    
+    .button_container:hover a{
+      top:0px;
+      text-decoration-line: none;
+    }
+    .button_container:hover {
+      width:120px; height: 120px;
+      transform:  scale(1.2) rotate(-10deg);
+      
+    }
+.button_container:hover .head{
+      filter: contrast(80%) grayscale(50%) ;
+      
+    }
+    
+        /*    sidebarbutton    */
+    nav{
+       
+       
+           
+       position: fixed;
+       justify-content: center;
+       text-align: center;
+           height: 100%;
+           width: 0;
+           z-index: 1;
+           top:0;
+           right:0;
+       overflow-x: hidden;
+           transition: 0.5s ease;
+          
+           
+    
+    }
+
+      .home{
+        display: inline-block;
+        font-family:'fontello'; text-decoration: none;
+        color:#292929;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      color:white;
+      font-size: 35px;
+      font-weight: 900;
+      filter: drop-shadow(0px 0px 2px gray);
+        
+      }
+    
+    .sidebr_cls{
+      text-decoration-line: none;
+      position: fixed;
+      top:-2px;
+      right: 19px;
+      font-size: 36px;
+      display: none;
+      color: black;
+      font-weight: 400;
+    }
+    
+    
+    .sidebr_bt{
+      text-decoration-line: none;
+      font-size: 20px;
+      color: black;
+      position: fixed;
+      display: block;
+      right: 20px;
+      top:10px;
+      z-index: 2;
+      border: none;
+      
+    }

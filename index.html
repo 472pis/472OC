@@ -3,13 +3,13 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>472main</title>
-  <script src="fetch.js"></script>
-  <script src="bgmvar.js"></script>
+  <title>472OC</title>
+  <script src="oc/fetch.js"></script>
+  <script src="oc/bgmvar.js"></script>
   <script src="eyetracker.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!--font-->
-  <link href="https://fonts.googleapis.com/css?family=Abel|Black+Han+Sans|Gaegu:300|Poor+Story|Rubik+Mono+One|Song+Myung|Sunshiney&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Black+Han+Sans|Gaegu:300|Poor+Story|Rubik+Mono+One|Song+Myung|Sunshiney|Noto+Sans+KR:100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
 <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
@@ -17,10 +17,11 @@
  
   <style>
     
-    @import url(eyetracker.css);
-    @import url("split_text.css");
-    @import url("ocsitesidebarcss.css");
-    @import url("lightbox.css");
+    @import url("eyetracker.css");
+    @import url("oc/split_text.css");
+    @import url("oc/ocsitesidebarcss.css");
+    @import url("oc/lightbox.css");
+    @import url("oc/textarea.css");
     
     html,body{
       height:100%;
@@ -63,15 +64,14 @@
     
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
 <div id="mainwarp">
 <!--    무조건 메인랩 안에 넣을 것  없으면 추가하셈 -->
    <div id="lightbox">
    <a href="javascript:void(0)" class="closebt" onclick="closeLightBox();">&times;</a>
-   <img src="" alt="">
    <div id="lightbox_content">
      <script>
-      fetch('lightbox_content.html').then(function(response){
+      fetch('oc/lightbox_content.html').then(function(response){
   response.text().then(function(text){
   document.querySelector('#lightbox_content').innerHTML = text;
     })
@@ -109,67 +109,47 @@
     <h3 style="font-size: 1rem; font-family: 'Abel', sans-serif;">Take a look!</h3>
     <script>Splitting();</script>
   </div>
+  
   <div class="button_box">  
-   <div class="button_images">
-    <div class="one_fourth">
-       <div style="background:blue;" class="button_container">
-        <img src="candela/candela.png" alt="">
-        <a style="font-size: 1.5rem" href="OC.html#!candela">CANDELA</a>  
-      </div>
-      
-    </div>
-    <div class="one_fourth">
-       <div style="background:hotpink;" class="button_container">      
-        <img src="lux/lux.png" alt="">
-        <a href="OC.html#!lux">LUX</a>
-      </div>
-      
-    </div>
-    <div class="one_fourth">
-       <div style="background:powderblue;" class="button_container">      
-        <img src="bubble/bubble.png" alt="">
-        <a href="OC.html#!bubble">BUBBLE</a>
-      </div>
-      
-    </div>
-    <div class="one_fourth">
-       <div style="background:#ff3c00;" class="button_container">       
-        <img src="gm/gm.png" alt="">
-        <a href="OC.html#!gm">GM</a>
-      </div>
-    </div>
-  </div>
-  <div class="button_images">
-  <div class="one_fourth">
-       <div style="background:#7c85a0;" class="button_container">
-        <img src="wifi/wifi.png" alt="">
-        <a href="OC.html#!wifi">WIFI</a>  
-      </div>
-      
-    </div>
-    <div class="one_fourth">
-       <div style="background:purple;" class="button_container">      
-        <img src="clear/clear.png" alt="">
-        <a href="OC.html#!clear">CLEAR</a>
-      </div>
-      
-    </div>
-    <div class="one_fourth">
-       <div style="background:#a8d65f;" class="button_container">      
-        <img src="yuta/yuta.png" alt="">
-        <a href="OC.html#!yuta">YUTA</a>
-      </div>
-      
-    </div>
-    <div class="one_fourth">
-       <div style="background:red;" class="button_container">       
-        <img src="nothing/nothing.png" alt="">
-        <a style="font-size:1.5rem;" href="OC.html#!nothing">NOTHING</a>
-      </div>
-      
-    </div>
-  </div>
+<!-- java here -->
 </div>
+<script>
+
+        var items = Object.keys(setting);
+        var i = 0;
+        var tags = '';
+    
+    while(i<items.length-1){
+      
+      var char = items[i];
+      var split = setting[char].split(',');
+      var tag = '<div class="one_fourth"><div style="background:'+split[4]+';" class="button_container"><div class="head" style="background-image: url(../'+char+'/'+char+'.png);"></div><a'+split[5]+' href="oc/index.html#!'+char+'">'+char.toUpperCase()+'</a></div></div>';
+        function divplus(a,b){
+          var aa = [0,4,8,12];
+          var bb = [3,7,11,15];
+          
+        if(bb.includes(b)){
+          var line = '</div>';
+          tag = tag + line;
+        }else{ tag = tag };
+          
+        if(aa.includes(a)){
+          var line2 = '<div class="button_images">';
+          tag = line2 + tag;
+        }else{ tag = tag };
+          
+        };
+      
+        divplus(i,i);
+        tags = tags + tag;
+        
+      i = i + 1;  
+      
+    };
+    
+    document.querySelector('.button_box').innerHTML = tags;
+    
+   </script>
  <br>
   <a style="color:black" href="javascript:void(0)" class="openbt" onclick="openLightBox();">?</a>
 </div>
