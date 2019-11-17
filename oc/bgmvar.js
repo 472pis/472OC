@@ -8,7 +8,7 @@ var setting = {
 "clear" : "q6p6sx4v7D0,white,black,6,purple,",
 "yuta" : "m_jOT8qIhVE,white,#5d5d5d,7,#a8d65f,",
 "nothing" : "aDlNMawir4o,#292929,white,8,red, style='font-size:1.5rem;'",
-"z472" : "aDlNMawir4o,white,black,9",
+"z472" : "4zzmk--kBHA,white,black,9",
 };
 
 
